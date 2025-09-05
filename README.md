@@ -1,4 +1,3 @@
-sudo cp servicectl.sh /usr/local/bin/servicectl
 # servicectl 🔧
 
 A simple, user-friendly Bash CLI tool to manage and monitor `systemd` services.
