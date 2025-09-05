@@ -4,7 +4,15 @@ A simple, user-friendly Bash CLI tool to manage and monitor `systemd` services.
 
 ---
 
-## 🚀 Features
+## �️ OS Compatibility
+
+This tool is compatible with Linux distributions that use `systemd` (e.g., Ubuntu, Debian, Fedora, Arch, CentOS, etc.).
+
+It will not work on non-systemd systems (such as macOS, Windows, or Linux distros without systemd).
+
+---
+
+## �🚀 Features
 
 - List active services
 - Check service status
