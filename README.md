@@ -1,6 +1,9 @@
 # servicectl 🔧
 
+
 A simple, user-friendly Bash CLI tool to manage and monitor `systemd` services.
+
+> **Note:** This tool is under active development. Features and behavior may change.
 
 ---
 
@@ -46,6 +49,8 @@ servicectl enable <service>
 servicectl disable <service>
 servicectl failed
 ```
+
+**Note:** Commands that modify services (start, stop, restart, enable, disable) require `sudo` privileges. You will be prompted for your password if you have not authenticated recently.
 
 **Example:**
 ```bash
