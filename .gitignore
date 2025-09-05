@@ -1,0 +1,21 @@
+# Ignore backup and temp files
+*~
+*.swp
+*.swo
+
+# Ignore system files
+.DS_Store
+.vscode
+
+# Ignore logs
+*.log
+
+# Ignore executable binaries (if built later)
+servicectl
+
+# Ignore install script cache/output (if any)
+*.out
+
+# Secrets
+.env
+
