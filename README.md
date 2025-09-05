@@ -1,32 +1,60 @@
+sudo cp servicectl.sh /usr/local/bin/servicectl
 # servicectl 🔧
 
-A simple and user-friendly Bash CLI tool to manage and monitor `systemd` services.
+A simple, user-friendly Bash CLI tool to manage and monitor `systemd` services.
 
 ---
 
 ## 🚀 Features
 
-- ✅ List active services
-- 🔍 Check service status
-- ▶️ Start / ⏹️ Stop / 🔄 Restart services
-- ⚙️ Enable or disable services on boot
-- ⚠️ View failed services
-- 🎨 Clean CLI output with color-coded feedback
+- List active services
+- Check service status
+- Start / Stop / Restart services
+- Enable or disable services on boot
+- View failed services
+- Clean, color-coded CLI output
 
 ---
 
 ## 📦 Installation
 
-### 1. Clone the Repository
+```bash
+git clone https://github.com/DebaA17/servicectl.git
+cd servicectl
+chmod +x servicectl.sh
+sudo cp servicectl.sh /usr/local/bin/servicectl
+```
+
+---
+
+## 🛠️ Usage
 
 ```bash
-git clone https://github.com/yourusername/servicectl.git
-cd servicectl
+servicectl list
+servicectl status <service>
+servicectl start <service>
+servicectl stop <service>
+servicectl restart <service>
+servicectl enable <service>
+servicectl disable <service>
+servicectl failed
+```
 
-## 2. Make It Executable
-chmod +x servicectl.sh
+**Example:**
+```bash
+servicectl status ssh
+servicectl restart nginx
+```
 
+---
 
-3. 
-sudo cp servicectl.sh /usr/local/bin/servicectl
+## 🤝 Contributing
+
+Contributions are welcome! Please open issues or pull requests.
+
+---
+
+## 📄 License
+
+MIT License. See [LICENSE](LICENSE) for details.
 
