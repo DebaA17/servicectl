@@ -8,8 +8,11 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
+VERSION="1.0.0"
+
 usage() {
-    echo -e "${YELLOW}Usage:${NC}"
+    echo -e "${YELLOW}servicectl - systemd service manager${NC}"
+    echo -e "\nUsage:"
     echo "  servicectl list"
     echo "  servicectl status <service>"
     echo "  servicectl start <service>"
@@ -18,7 +21,12 @@ usage() {
     echo "  servicectl enable <service>"
     echo "  servicectl disable <service>"
     echo "  servicectl failed"
-    exit 1
+    echo "  servicectl --help"
+    echo "  servicectl --version"
+    echo -e "\nOptions:"
+    echo "  --help       Show this help message"
+    echo "  --version    Show version information"
+    exit 0
 }
 
 check_service_name() {
@@ -72,6 +80,7 @@ list_failed() {
     systemctl --failed --type=service | awk 'NR>1 && NF {print "✗ " $1 "\t(" $4 ")"}'
 }
 
+
 case "$1" in
     list)
         list_services
@@ -96,6 +105,13 @@ case "$1" in
         ;;
     failed)
         list_failed
+        ;;
+    --help|-h|help)
+        usage
+        ;;
+    --version|-v|version)
+        echo "servicectl version $VERSION"
+        exit 0
         ;;
     *)
         usage
